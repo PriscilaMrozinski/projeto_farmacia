@@ -98,8 +98,6 @@ public class Produto {
 			switch (this.tipo) {
 			case 1 -> tipo = "Medicamentos";
 			case 2 -> tipo = "Cosméticos";
-			case 3 -> tipo = "Primeiros Socorros";
-			case 4 -> tipo = "Suplemento Alimentar";			
 			}
 			
 			System.out.println("\n\n************************");

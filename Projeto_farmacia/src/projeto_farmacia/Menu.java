@@ -2,6 +2,8 @@ package projeto_farmacia;
 
 import java.util.Scanner;
 
+import projeto_farmacia.model.Cosmeticos;
+import projeto_farmacia.model.Medicamentos;
 import projeto_farmacia.model.Produto;
 
 public class Menu {
@@ -29,6 +31,15 @@ public class Menu {
 		//Adicionar quantidade:
 		p1.adicionar(240);
 		p1.visualizar();
+		
+		//testar classe Medicamentos
+		Medicamentos m1 = new Medicamentos(3, "Doril a dor sumiu", 1, 10.00f, 35, 1, "Paracetamol");
+		m1.visualizar();
+		
+		//testar classe Cosmeticos:
+		Cosmeticos c1 = new Cosmeticos(1, "Shampoo", 3, 25.50f, 20, 3, "Dove");
+		c1.visualizar();
+
 		
 		int opcao;
 
