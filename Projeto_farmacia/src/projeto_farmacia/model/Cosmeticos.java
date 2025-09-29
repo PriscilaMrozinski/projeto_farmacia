@@ -1,26 +1,24 @@
 package projeto_farmacia.model;
 
 public class Cosmeticos extends Produto{
-	//Atributos específico:
-	private int tipo_uso;
+	//Atributos específicos:
+	private int tipoUso;
 	private String marca;
-	
-	
+		
 	//Método Construtor:	
-	public Cosmeticos(int codigo, String nome, int tipo_produto, float preco, int quantidade, int tipo_uso,
-			String marca) {
-		super(codigo, nome, tipo_produto, preco, quantidade);
-		this.tipo_uso = tipo_uso;
+	public Cosmeticos(int codigo, String nome, int tipo, float preco, int quantidade, int tipoUso, String marca) {
+		super(codigo, nome, tipo, preco, quantidade);
+		this.tipoUso = tipoUso;
 		this.marca = marca;
 	}
 
 	//Métodos Get e Set:
-	public int getTipo_uso() {
-		return tipo_uso;
+	public int getTipoUso() {
+		return tipoUso;
 	}
 
-	public void setTipo_uso(int tipo_uso) {
-		this.tipo_uso = tipo_uso;
+	public void setTipoUso(int tipoUso) {
+		this.tipoUso = tipoUso;
 	}
 
 	public String getMarca() {
@@ -31,25 +29,22 @@ public class Cosmeticos extends Produto{
 		this.marca = marca;
 	}
 	
-	
 	//Adiciona por Herança o método visualizar:
 	@Override
 	public void visualizar() {	
 		String uso ="";
-		switch(this.tipo_uso) {
+		switch(this.tipoUso) {
 		case 1 -> uso="facial";
 		case 2 -> uso="corporal";
 		case 3 -> uso="capilar";
-		default -> uso="sem tarja";
+		default -> uso="sem tipo de uso";
 		}
 		
-		
+	
 		super.visualizar();
 		System.out.printf("Tipo de Uso: %s%n", uso);
 		System.out.printf("Marca: %s%n", this.marca);
 		
 	}
-	
-	
 
 }
